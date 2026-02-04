@@ -1,10 +1,8 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -std=c11 -g
+	
+assn1: main.c
+	${CC} -g -o assn1 main.c
 
-all: p2
-
-p2: p2.c
-	$(CC) $(CFLAGS) -o p2 p2.c
-
+.PHONY: clean
 clean:
-	rm -f p2 *.o
+	rm -v assn1			
+
