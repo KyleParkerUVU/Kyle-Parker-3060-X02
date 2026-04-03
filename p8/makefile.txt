@@ -1,0 +1,18 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -g
+
+TARGET = p8
+OBJS = p8.o
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+
+p8.o: p8.c
+	$(CC) $(CFLAGS) -c p8.c
+
+clean:
+	rm -f $(TARGET) $(OBJS)
+
+.PHONY: all clean
